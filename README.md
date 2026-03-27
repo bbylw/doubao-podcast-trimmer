@@ -26,6 +26,7 @@
 - 📦 **批量处理** - 支持批量处理多个音频文件
 - 🚀 **简单易用** - 命令行工具和Python API双重支持
 - 🎵 **保持质量** - 输出音频保持原始采样率和音质
+- 🤖 **Comate Skill** - 同时也是百度文心快码 Comate 的 Skill 插件
 
 ### 📋 系统要求
 
@@ -161,6 +162,37 @@ $ python doubao_trimmer.py --analyze 1.wav 2.wav
 
 - ✅ WAV 格式（16bit/24bit，单声道/立体声）
 - ❌ MP3、M4A 等格式（建议先转换为 WAV）
+
+### 🤖 Comate Skill 支持
+
+本项目同时也是一个 **百度文心快码 Comate Skill**，可以直接在 Comate 编辑器中使用。
+
+#### 项目结构
+
+```
+doubao-podcast-trimmer/
+├── doubao_trimmer.py       # 独立命令行工具
+├── README.md
+├── LICENSE
+├── requirements.txt
+└── skill/                   # Comate Skill 目录
+    ├── SKILL.md            # Skill 定义文档
+    ├── agents/
+    │   └── openai.yaml     # Skill 配置
+    └── scripts/
+        └── trim_podcast.py # Skill 核心脚本
+```
+
+#### 在 Comate 中使用
+
+如果你使用百度文心快码 Comate 编辑器，可以直接加载本项目的 `skill/` 目录：
+
+1. 打开 Comate 编辑器
+2. 进入 Skill 管理
+3. 添加本地 Skill，选择 `skill/` 目录
+4. 然后在对话中直接说："帮我剪辑这个豆包播客音频"
+
+Comate 会自动识别并调用本项目处理音频文件。
 
 ### 🛠️ 转换其他格式
 

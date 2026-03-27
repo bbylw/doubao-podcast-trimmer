@@ -1,0 +1,4 @@
+interface:
+  display_name: "豆包播客剪辑"
+  short_description: "自动剪辑豆包播客音频，移除固定片头片尾"
+  default_prompt: "帮我剪辑这个豆包播客音频，移除固定的片头片尾内容"
